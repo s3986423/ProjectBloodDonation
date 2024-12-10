@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "597782668977",
+    "firebase_url": "https://projectblooddonation-6342e-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "projectblooddonation-6342e",
+    "storage_bucket": "projectblooddonation-6342e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:597782668977:android:5efe49232243f616536490",
+        "android_client_info": {
+          "package_name": "com.example.projectblooddonation"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA6seGlpAmIMZ78WSoK8zhute8w2Ozy1DI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
