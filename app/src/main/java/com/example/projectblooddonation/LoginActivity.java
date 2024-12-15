@@ -36,8 +36,6 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = findViewById(R.id.btnLogin);
         tvRegister = findViewById(R.id.tvRegister);
 
-        FirebaseUtil.addMockDonationSites();
-
         // Set up Login button click listener
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,7 +57,7 @@ public class LoginActivity extends AppCompatActivity {
                                                     // Navigate based on role
                                                     if ("Donor".equals(role)) {
                                                         // Start Donor Activity
-                                                        Intent intent = new Intent(LoginActivity.this, MapsActivity.class);
+                                                        Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                                                         startActivity(intent);
                                                         finish(); // Close login activity
                                                     } else if ("Site Manager".equals(role)) {

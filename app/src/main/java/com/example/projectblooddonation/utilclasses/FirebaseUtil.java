@@ -2,8 +2,10 @@ package com.example.projectblooddonation.utilclasses;
 
 import android.util.Log;
 
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.GeoPoint;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,14 +40,21 @@ public class FirebaseUtil {
         }
     }
 
-    private static Map<String, Object> createSite(String name, String address, double latitude, double longitude,
+    public static Map<String, Object> createSite(String name, String address, double latitude, double longitude,
                                            List<String> requiredBloodTypes, List<String> registeredDonors) {
+        FirebaseFirestore db = FirebaseFirestore.getInstance();
+
         Map<String, Object> site = new HashMap<>();
         site.put("name", name);
         site.put("address", address);
         site.put("location", new GeoPoint(latitude, longitude)); // Using Firestore GeoPoint for location
         site.put("requiredBloodTypes", requiredBloodTypes);      // List of required blood types
         site.put("registeredDonors", registeredDonors);          // List of donor IDs
+        db.collection("donation_sites").add(site)
+                .addOnSuccessListener(documentReference ->
+                        Log.d("Firestore", "Added mock site with ID: " + documentReference.getId()))
+                .addOnFailureListener(e ->
+                        Log.e("Firestore", "Error adding mock site", e));
         return site;
     }
 

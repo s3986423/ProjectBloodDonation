@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Common items -->
+    <item android:id="@+id/nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/ic_profile" />
+    <item android:id="@+id/nav_map"
+        android:title="Donation Map"
+        android:icon="@drawable/ic_map" />
+
+    <!-- Donor-specific item -->
+    <item android:id="@+id/nav_register_donation"
+        android:title="Register for Donation"
+        android:icon="@drawable/ic_register" />
+
+    <!-- Site Manager-specific items -->
+    <item android:id="@+id/nav_manage_sites"
+        android:title="Manage Sites"
+        android:icon="@drawable/ic_manage_sites" />
+
+    <item android:id="@+id/nav_view_donors"
+        android:title="View Donors"
+        android:icon="@drawable/ic_donors" />
+
+    <!-- Super User-specific item -->
+    <item android:id="@+id/nav_reports"
+        android:title="Generate Reports"
+        android:icon="@drawable/ic_reports" />
+</menu>
