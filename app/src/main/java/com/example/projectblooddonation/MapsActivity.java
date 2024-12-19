@@ -85,10 +85,6 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
                 .addOnFailureListener(e ->
                         Toast.makeText(MapsActivity.this, "Failed to fetch sites: " + e.getMessage(), Toast.LENGTH_SHORT).show());
 
-        // Check location permissions
-        if (ContextCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-            ActivityCompat.requestPermissions(this, new String[]{android.Manifest.permission.ACCESS_FINE_LOCATION}, LOCATION_REQUEST_CODE);
-        }
         getCurrentLocation();
 
     }

@@ -52,19 +52,10 @@ public class LoginActivity extends AppCompatActivity {
                                             .addOnSuccessListener(documentSnapshot -> {
                                                 if (documentSnapshot.exists()) {
                                                     String role = documentSnapshot.getString("role");
-                                                    Toast.makeText(LoginActivity.this, "Welcome, " + role, Toast.LENGTH_SHORT).show();
-
-                                                    // Navigate based on role
-                                                    if ("Donor".equals(role)) {
-                                                        // Start Donor Activity
+                                                    Toast.makeText(LoginActivity.this, "Welcome, " + role, Toast.LENGTH_SHORT).show();                                                        // Start Donor Activity
                                                         Intent intent = new Intent(LoginActivity.this, ProfileActivity.class);
                                                         startActivity(intent);
                                                         finish(); // Close login activity
-                                                    } else if ("Site Manager".equals(role)) {
-                                                        // Start Site Manager Activity
-                                                    } else if ("Super User".equals(role)) {
-                                                        // Start Super User Activity
-                                                    }
                                                 } else {
                                                     Toast.makeText(LoginActivity.this, "User role not found", Toast.LENGTH_SHORT).show();
                                                 }
