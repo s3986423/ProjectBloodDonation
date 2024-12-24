@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/siteNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Name"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/siteAddressText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Site Address"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/siteDurationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Duration"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/siteDateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date"
+        android:textSize="18dp" />
+
+    <Button
+        android:id="@+id/registerSelfButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Register" />
+
+    <Button
+        android:id="@+id/registerOtherButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Register for someone else" />
+</LinearLayout>

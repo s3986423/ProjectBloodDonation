@@ -170,13 +170,12 @@ public class ProfileActivity extends AppCompatActivity {
                 // Already on profile, do nothing
                 drawerLayout.closeDrawer(GravityCompat.START);
                 return true;
-
             } else if (id == R.id.nav_map) {
                 // Navigate to map
                 startActivity(new Intent(ProfileActivity.this, MapsActivity.class));
             } else if (id == R.id.nav_register_donation) {
-//                // Navigate to donation registration
-//                startActivity(new Intent(ProfileActivity.this, DonationRegistrationActivity.class));
+                // Navigate to donation registration
+                startActivity(new Intent(ProfileActivity.this, RegisterForOthersActivity.class));
             } else if (id == R.id.nav_manage_sites) {
 //                // Navigate to manage sites
 //                startActivity(new Intent(ProfileActivity.this, ManageSitesActivity.class));
